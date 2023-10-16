@@ -12,6 +12,7 @@ WHEN the game is over
 THEN I can save my initials and my score
 */
 
+
 // TIMER JUST PAUSES WHEN VIEWING SCORES
 // ( ?? SHOULD PAUSE OR RESET ?? )
 
