@@ -51,10 +51,14 @@ button:active {
 
 .question-container {
   display: none;
-  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 30%;
+  padding-right: auto;
 }
 
-.highscores-container{
+.highscores-container,
+.end-container{
   display: none;
   justify-content: flex-start;
   align-items: center;
