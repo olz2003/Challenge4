@@ -1,48 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <main>
-      <div class="quiz-container">
-        <header class="wrapper">
-          <h3 id="highscores">View Highscores</h3>
-          <h3 id="timer">Time: 0</h3>
+<head>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <main>
+    <div class="quiz-container">
+      <header class="wrapper">
+        <h3 id="highscores">View Highscores</h3>
+        <h3 id="timer">Time: 0</h3>
+      </header>
+      <div class="start-container">
+        <!-- START SCREEN -->
+        <header>
+          <h1>Coding Quiz Challenge</h1>
+          <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
         </header>
-        <div class="start-container">
-          <!-- START SCREEN -->
-          <header>
-            <h1>Coding Quiz Challenge</h1>
-            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-          </header>
-          <button id="start">Start Quiz</button>
-        </div>
-        <div class="question-container">
-          <!-- QUESTIONS -->
-          <header id="question">Question goes here</header>
-          <button id="answerA">Answer A</button>
-          <button id="answerB">Answer B</button>
-          <button id="answerC">Answer C</button>
-          <button id="answerD">Answer D</button>
-        </div>
-        <div class="end-container">
-          <header>
-            <h1>All done!</h1>
-            <p>Your final score is: <span id="final-score">0</span></p>
-          </header>
-          <div class="">
-            <label for="initials">Enter initials:</label>
-            <input type="text" class="form-input" name="last-name" />
-            <button id="submit">Submit</button>
-          </div>
+        <button id="start">Start Quiz</button>
+      </div>
+      <div class="question-container" style="display: none;">
+        <!-- QUESTIONS -->
+        <header id="question">Question goes here</header>
+        <button id="answerA">Answer A</button>
+        <button id="answerB">Answer B</button>
+        <button id="answerC">Answer C</button>
+        <button id="answerD">Answer D</button>
+      </div>
+      <div class="end-container" style="display: none;">
+        <!-- END SCREEN -->
+        <header>
+          <h1>All done!</h1>
+          <p>Your final score is: <span id="final-score">0</span></p>
+        </header>
+        <div class="col-12 col-sm-6">
+          <label for="player-initials">Enter initials:</label>
+          <input type="text" class="form-input" id="player-initials" />
+          <button id="submit-initials">Submit</button>
         </div>
       </div>
-      <div class="highscores-container">
-        <!-- HIGHSCORES -->
-        <button id="back-to-quiz">Back to Quiz</button>
-      </div>
-    </main>
-    <script src="assets/javascript/script.js"></script>
-  </body>
+    </div>
+    <div class="highscores-container" style="display: none;">
+      <!-- HIGHSCORES -->
+      <header>
+        <h1>Highscores</h1>
+      </header>
+      <ul id="highscores-list"></ul>
+      <button id="back-to-quiz">Back to Quiz</button>
+      <button id="clear-scores">Clear Highscores</button>
+    </div>
+  </main>
+  <script src="assets/javascript/script.js"></script>
+</body>
 </html>
