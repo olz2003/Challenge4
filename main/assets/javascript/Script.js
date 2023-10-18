@@ -1,14 +1,15 @@
+var submitButton = document.getElementById("submit-initials");
 var checkHighscores = document.getElementById("highscores");
+var initials = document.getElementById("player-initials");
+var backButton = document.getElementById("back-to-quiz");
 var startButton = document.getElementById("start");
 var timeEl = document.getElementById("timer");
+
+var endContainer = document.querySelector(".end-container");
+var quizContainer = document.querySelector(".quiz-container");
 var startContainer = document.querySelector(".start-container");
 var questionContainer = document.querySelector(".question-container");
 var highscoresContainer = document.querySelector(".highscores-container");
-var backButton = document.getElementById("back-to-quiz");
-var quizContainer = document.querySelector(".quiz-container");
-var endContainer = document.querySelector(".end-container");
-var submitButton = document.getElementById("submit-initials");
-var initials = document.getElementById("player-initials");
 
 var secondsLeft = 75;
 var finalScore;
