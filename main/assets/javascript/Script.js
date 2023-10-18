@@ -9,6 +9,7 @@ var endContainer = document.querySelector(".end-container");
 var quizContainer = document.querySelector(".quiz-container");
 var startContainer = document.querySelector(".start-container");
 var questionContainer = document.querySelector(".question-container");
+
 var highscoresContainer = document.querySelector(".highscores-container");
 
 var secondsLeft = 75;
@@ -53,6 +54,7 @@ function startQuiz() {
       secondsLeft--;
       timeEl.textContent = "Time: " + secondsLeft;
       if (secondsLeft <= 0) {
+
         clearInterval(timerInterval);
         gameOver();
       }
@@ -84,6 +86,7 @@ function startQuiz() {
         checkAnswer(currentQuestion.answers[2], currentQuestion.correctAnswer);
       });
       answerD.addEventListener("click", function () {
+
         checkAnswer(currentQuestion.answers[3], currentQuestion.correctAnswer);
       });
     } else {
@@ -106,10 +109,12 @@ function startQuiz() {
 
   function gameOver() {
     finalScore = secondsLeft;
+
     clearInterval(timerInterval);
     questionContainer.style.display = "none";
     endContainer.style.display = "block";
     var finalScoreElement = document.querySelector("#final-score");
+
     finalScoreElement.textContent = "Your final score is: " + finalScore;
   }
 
@@ -152,6 +157,7 @@ function startQuiz() {
   });
 
   backButton.addEventListener("click", function () {
+
     timeEl.textContent = "Time: 0";
     highscoresContainer.style.display = "none";
     questionContainer.style.display = "none";
